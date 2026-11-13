@@ -1074,40 +1074,74 @@
                             <i class="fa-solid fa-arrow-right text-slate-300 ml-auto group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"></i>
                         </a>
 
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                            <div class="w-11 h-11 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg">
+                        <a href="mailto:info@anugerahkembar.co.id" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-400 hover:bg-brand-50/40 transition-all group">
+                            <div class="w-11 h-11 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
                                 <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Email Perusahaan</div>
                                 <div class="text-sm font-extrabold text-slate-900">info@anugerahkembar.co.id</div>
                             </div>
-                        </div>
+                            <i class="fa-solid fa-arrow-right text-slate-300 ml-auto group-hover:text-brand-500 group-hover:translate-x-1 transition-all"></i>
+                        </a>
 
-                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                            <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg">
+                        <a href="https://maps.app.goo.gl/cgdxd2KKzxVWF2FY8" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-brand-400 hover:bg-brand-50/40 transition-all group">
+                            <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Area Operasional</div>
-                                <div class="text-sm font-extrabold text-slate-900">Bekasi, Jakarta & Sekitarnya</div>
+                                <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Alamat</div>
+                                <div class="text-sm font-extrabold text-slate-900">Karangjaya, Pebayuran, Kab. Bekasi</div>
+                                <div class="text-[11px] text-slate-500 mt-0.5">Melayani Bekasi, Jakarta &amp; sekitarnya</div>
                             </div>
-                        </div>
+                            <i class="fa-solid fa-arrow-right text-slate-300 ml-auto group-hover:text-brand-500 group-hover:translate-x-1 transition-all"></i>
+                        </a>
                     </div>
                 </div>
 
                 <div class="lg:col-span-6 reveal reveal-delay-1">
-                    <div class="rounded-3xl overflow-hidden border border-slate-200 card-shadow-lg bg-gradient-to-br from-brand-50 via-white to-brand-50 h-[380px] relative flex items-center justify-center noise">
-                        <div class="absolute inset-0 grid-pattern opacity-30"></div>
-                        <div class="text-center p-6 relative">
-                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-600 to-brand-500 text-white flex items-center justify-center text-2xl mx-auto mb-4 shadow-xl shadow-brand-500/30 animate-float">
-                                <i class="fa-solid fa-map-location-dot"></i>
+                    <div class="rounded-3xl overflow-hidden border border-slate-200 card-shadow-lg relative h-[420px] bg-slate-100">
+
+                        <!-- Peta dimuat setelah diklik: hemat kuota & tidak memperlambat halaman -->
+                        <div id="mapFrame" class="absolute inset-0 hidden">
+                            <iframe id="gmap" title="Peta lokasi CV Anugerah Kembar Makmur Jaya"
+                                    data-src="https://www.google.com/maps?q=-6.1694796,107.2520048&amp;hl=id&amp;z=17&amp;output=embed"
+                                    class="w-full h-full border-0" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                        </div>
+
+                        <!-- Tampilan awal sebelum peta dimuat -->
+                        <div id="mapCover" class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-brand-50 noise">
+                            <div class="absolute inset-0 grid-pattern opacity-30"></div>
+                            <div class="relative h-full flex items-center justify-center text-center p-6">
+                                <div>
+                                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-600 to-brand-500 text-white flex items-center justify-center text-2xl mx-auto mb-4 shadow-xl shadow-brand-500/30 animate-float">
+                                        <i class="fa-solid fa-map-location-dot"></i>
+                                    </div>
+                                    <h4 class="font-display text-lg font-extrabold text-slate-900">CV Anugerah Kembar Makmur Jaya</h4>
+                                    <p class="text-xs text-slate-500 mt-2 max-w-xs mx-auto leading-relaxed">
+                                        Karangjaya, Kec. Pebayuran, Kab. Bekasi<br>
+                                        Melayani Bekasi, Jakarta &amp; sekitarnya
+                                    </p>
+                                    <div class="flex flex-wrap items-center justify-center gap-2 mt-5">
+                                        <button onclick="showMap()" class="btn-shine px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold text-xs shadow-lg shadow-brand-500/30 flex items-center gap-2 transition-all hover:-translate-y-0.5">
+                                            <i class="fa-solid fa-map"></i>
+                                            <span>Tampilkan Peta</span>
+                                        </button>
+                                        <a href="https://maps.app.goo.gl/cgdxd2KKzxVWF2FY8" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-slate-700 font-bold text-xs hover:border-brand-400 hover:text-brand-600 transition-all flex items-center gap-2">
+                                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                            <span>Buka di Google Maps</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="font-display text-lg font-extrabold text-slate-900">CV Anugerah Kembar Makmur Jaya</h4>
-                            <p class="text-xs text-slate-500 mt-2 max-w-xs mx-auto leading-relaxed">Bekasi & JABODETABEK — Siap Melayani Panggilan Service & Jual Beli AC</p>
-                            <a href="https://wa.me/6285817777572" target="_blank" class="btn-shine inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 text-white font-bold text-xs shadow-lg shadow-brand-500/30">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <span>Hubungi via WhatsApp</span>
+                        </div>
+
+                        <!-- Tombol mengambang setelah peta terbuka -->
+                        <div id="mapOpenBtn" class="hidden absolute bottom-4 right-4 z-10">
+                            <a href="https://maps.app.goo.gl/cgdxd2KKzxVWF2FY8" target="_blank" rel="noopener" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/95 backdrop-blur text-brand-700 font-bold text-xs shadow-lg border border-slate-200 hover:bg-white transition-all">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                                <span>Petunjuk Arah</span>
                             </a>
                         </div>
                     </div>
@@ -1247,6 +1281,19 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        /* ===== Peta: iframe dimuat saat pengunjung menekan "Tampilkan Peta" ===== */
+        function showMap() {
+            const frame = document.getElementById('gmap');
+            const wrap = document.getElementById('mapFrame');
+            const cover = document.getElementById('mapCover');
+            const btn = document.getElementById('mapOpenBtn');
+            if (!frame || !wrap || !cover) return;
+            if (!frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src);
+            wrap.classList.remove('hidden');
+            cover.classList.add('hidden');
+            if (btn) btn.classList.remove('hidden');
+        }
 
         /* ===== Modal ===== */
         function openBookingModal(packageName) {
